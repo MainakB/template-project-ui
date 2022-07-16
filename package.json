@@ -1,9 +1,9 @@
 {
   "name": "@kaniamb/iostarter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "bin": "bin/cli.js",
   "scripts": {
-    "version": "git add -A src",
+    "version": "git add -A bin",
     "postversion": "git push && git push --tags"
   }
 }
