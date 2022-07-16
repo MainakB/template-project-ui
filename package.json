@@ -2,12 +2,9 @@
   "name": "kaniamb/iostarter",
   "version": "0.1.0",
   "bin": "bin/cli.js",
-  "devDependencies": {
-    "dotenv": "^16.0.1",
-    "typescript": "^4.7.4",
-    "tzatziki-core": "^1.0.0"
-  },
   "scripts": {
-    "test": "grunt test -c --suites=%suites% --customer=%customer% --browser=%browser%"
+    "prepare": "npm run build",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   }
 }
