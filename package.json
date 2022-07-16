@@ -1,5 +1,5 @@
 {
-  "name": "@kaniamb/iostarter",
+  "name": "kaniamb/iostarter",
   "version": "0.1.0",
   "bin": "bin/cli.js",
   "devDependencies": {

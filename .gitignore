@@ -2,9 +2,8 @@ dist
 .vscode
 node_modules
 Reports
-wdio.d.ts
+Reports
+_results_
 .DS_Store
-Gruntfile.js
-src/customers
-src/services-test
+
 
