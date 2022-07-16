@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
-const { execSync } = require("child_process");
+const { execSync, exec } = require("child_process");
 
 const runCommand = (command) => {
   try {
+    execSync(`${command}`, {stdio: 'inherit'})
   } catch (err) {
     console.error(`Failed to execute command ${command}`, err);
     return false;
@@ -12,7 +13,7 @@ const runCommand = (command) => {
 };
 
 const repoName = process.argv[2];
-const gitCheckoutCommand = `git clone --depth 1 https://github.com/MainakB/test-template-project ${repoName}`;
+const gitCheckoutCommand = `git clone --depth 1 https://github.com/MainakB/tesui-tzattziki ${repoName}`;
 const installDepsCommand = `cd ${repoName} && npm install`;
 
 console.log(`Cloning repository with name ${repoName}`);
