@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-const { execSync, exec } = require("child_process");
+const { execSync } = require("child_process");
 
 const runCommand = (command) => {
   try {
-    execSync(`${command}`, {stdio: 'inherit'})
+    execSync(`${command}`, { stdio: "inherit" });
   } catch (err) {
     console.error(`Failed to execute command ${command}`, err);
     return false;
@@ -19,16 +19,15 @@ const installDepsCommand = `cd ${repoName} && npm install`;
 console.log(`Cloning repository with name ${repoName}`);
 const checkout = runCommand(gitCheckoutCommand);
 
-if(!checkout) process.exit(code: -1)
+if (!checkout) process.exit(-1);
 
 console.log(`Installing dependencies for ${repoName}`);
 
 const installedDeps = runCommand(installDepsCommand);
 
-if(!installedDeps) process.exit(code: -1)
+if (!installedDeps) process.exit(-1);
 
 console.log(`Succesfuly cloned repo. Follow command to start.`);
-console.log(`cd ${repoName} && grunt test <parameters for test. Read Readme.md>`)
-
-
-
+console.log(
+  `cd ${repoName} && grunt test <parameters for test. Read Readme.md>`
+);
