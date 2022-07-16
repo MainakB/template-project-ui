@@ -1,9 +1,6 @@
 dist
 .vscode
 node_modules
-Reports
-Reports
-_results_
 .DS_Store
 
 
