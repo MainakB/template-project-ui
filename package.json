@@ -5,5 +5,8 @@
   "scripts": {
     "version": "git add -A bin",
     "postversion": "git push && git push --tags"
+  },
+  "dependencies": {
+    "open": "^8.4.0"
   }
 }
