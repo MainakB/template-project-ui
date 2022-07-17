@@ -64,7 +64,7 @@ const installLocalDeps = () => {
   if (!installedDeps) printErrorExit(`Unable to install local dependencies.`);
 };
 
-const openDocs = () => open("bin/index.html").then(() => {});
+const openDocs = () => open(`${repoName}/docs/index.html`).then(() => {});
 
 const run = (repoName) => {
   checkNodeVersion();
